@@ -37,8 +37,9 @@ function parse_shedule (html)
     const dom = new JSDOM(html);
     const table_rows = dom.window.document.getElementsByClassName('table-primary');
     console.log(table_rows.length)
-    get_shedule(table_rows[0], '1 week');
-    get_shedule(table_rows[1], '2 week');
+    let s1 = get_shedule(table_rows[0], '1 week');
+    let s2 = get_shedule(table_rows[1], '2 week');
+    return [s1,s2];
 
 }
 function get_html ()
@@ -55,4 +56,8 @@ function get_html ()
             parse_shedule(data);
         })
     });
+}
+module.exports = ()=>
+{
+    get_html();
 }

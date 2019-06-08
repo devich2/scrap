@@ -2,5 +2,6 @@ const schedule_parser = require('./parse');
 module.exports = (req, res)=>
 {
 
-    res.end('asd');
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify(schedule_parser()));
 }
