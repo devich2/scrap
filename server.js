@@ -58,6 +58,6 @@ function get_html ()
 }
 module.exports = (req, res)=>
 {
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify(get_html()));
+
+    res.end('END');
 }
