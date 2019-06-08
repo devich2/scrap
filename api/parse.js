@@ -59,5 +59,5 @@ function get_html ()
 }
 module.exports = ()=>
 {
-    get_html();
+    return get_html();
 }
