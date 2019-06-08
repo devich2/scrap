@@ -3,5 +3,5 @@ module.exports = (req, res)=>
 {
 
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify(schedule_parser()));
+    res.end(JSON.stringify(['dav']));
 }
