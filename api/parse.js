@@ -10,26 +10,26 @@ function get_shedule(table_row, week)
     const result = {'Понеділок' : [],'Вівторок' : [], 'Середа' : [], 'Четвер' : [], 'П’ятниця' : [], 'Субота' : [], }
     const tbody = table_row.querySelector('tbody');
     const rows = tbody.getElementsByTagName('tr');
-   for (let i = 0;i < rows.length; i++)
-   {
-       let keys = Object.keys(result);
-       let subjects = rows[i].getElementsByTagName('td');
-       for (let j = 1; j < subjects.length; j++)
-       {
-          let element = subjects[j];
-          let child_div = element.querySelector('div');
-                   if (child_div.hasChildNodes())
-                   {
-                       let name_day = element.getAttribute('data-title');
-                       let lesson = {};
-                       lesson[i+1] = child_div.textContent;
-                       result[keys[j-1]].push(lesson)
-                   }
+    for (let i = 0;i < rows.length; i++)
+    {
+        let keys = Object.keys(result);
+        let subjects = rows[i].getElementsByTagName('td');
+        for (let j = 1; j < subjects.length; j++)
+        {
+            let element = subjects[j];
+            let child_div = element.querySelector('div');
+            if (child_div.hasChildNodes())
+            {
+                let name_day = element.getAttribute('data-title');
+                let lesson = {};
+                lesson[i+1] = child_div.textContent;
+                result[keys[j-1]].push(lesson)
+            }
 
-       }
-       console.log("----------------------")
-   }
- return result;
+        }
+        console.log("----------------------")
+    }
+    return result;
 
 }
 function parse_shedule (html)
@@ -55,9 +55,4 @@ function get_html ()
             parse_shedule(data);
         })
     });
-}
-module.exports = (req, res)=>
-{
-
-    res.end('END');
 }

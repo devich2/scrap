@@ -1,7 +1,8 @@
 {
   "name": "scrap",
   "version": 2,
+  "public": true,
   "builds": [
-    { "src": "server.js", "use": "@now/node" }
+    { "src": "api/server.js", "use": "@now/node" }
   ]
 }
