@@ -29,7 +29,7 @@ function get_shedule(table_row, week)
        }
        console.log("----------------------")
    }
- console.log(result);
+ return result;
 
 }
 function parse_shedule (html)
