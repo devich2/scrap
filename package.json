@@ -10,9 +10,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@now/node-server": "^0.7.4",
+    "cheerio": "^1.0.0-rc.3",
     "git": "^0.1.5",
+    "htmldom": "^3.0.8",
     "jsdom": "^15.1.1",
+    "node-telegram-bot": "^0.1.9",
+    "node-telegram-bot-api": "^0.30.0",
     "now": "^15.4.0",
-    "request": "^2.88.0"
+    "request": "^2.88.0",
+    "telebot": "^1.2.6",
+    "xmldom": "^0.1.27"
   }
 }
