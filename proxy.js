@@ -15,6 +15,7 @@ const server = http.createServer((clientRequest, clientResponse) =>{
         }
     );
 
+    
     proxy.on('response', (serverResponse) =>{
         clientResponse.writeHead(
             serverResponse.statusCode,
